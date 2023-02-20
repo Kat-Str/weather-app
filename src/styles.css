@@ -1,0 +1,22 @@
+.search {
+  text-align: right;
+  margin: 30px 30px;
+}
+.main-emoji {
+  font-size: 80px;
+  color: rgb(58, 92, 214);
+}
+.city-name {
+  text-align: right;
+  margin: 0 30px;
+}
+.next-day {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+}
+.degrees {
+  font-size: 20px;
+  text-decoration: none;
+}
