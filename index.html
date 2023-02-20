@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/d3cb550a69.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -25,6 +26,11 @@
             <div class="row">
               <div class="search">
                 <form id="form-city">
+                  <input
+                    type="submit"
+                    value="Current location"
+                    id="current-location-button"
+                  />
                   <input type="submit" id="search-button" value="search" />
                   <input
                     type="text"
@@ -45,16 +51,8 @@
                   <div class="col-3">
                     <h2 id="main-display">
                       <span id="tepm-display">7</span>
-                      <sup
-                        ><a class="degrees" id="celsius" href="">°C</a>|<a
-                          class="degrees"
-                          id="fahrenheit"
-                          href=""
-                          >°F</a
-                        ></sup
-                      >
                     </h2>
-                    <p>Raining</p>
+                    <p id="weather-details">Raining</p>
                   </div>
                 </div>
               </div>
