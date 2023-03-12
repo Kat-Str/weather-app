@@ -27,7 +27,7 @@ small {
   text-align: left;
 }
 
-.city-name {
+.section-one {
   text-align: right;
   margin-right: 80px;
 }
@@ -61,11 +61,17 @@ small {
 .section-two p {
   display: inline-block;
 }
-.section-two h2 {
+#weather-icon {
+  transform: scale(1.5);
+  margin-right: 30px;
+}
+#tepm-display {
   font-size: 70px;
   margin: 20px 10px;
 }
-
+#weather-details {
+  text-transform: capitalize;
+}
 #search-engine {
   border-radius: 8px;
   border-style: none;
@@ -114,4 +120,12 @@ small {
   .button-36 {
     padding: 0 2.6rem;
   }
+}
+
+#main-display {
+  display: none;
+}
+
+h2 sup {
+  vertical-align: super;
 }

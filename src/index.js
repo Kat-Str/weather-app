@@ -33,6 +33,7 @@ let weatherDescription = document.querySelector("#weather-details");
 let windSpeed = document.querySelector("#wind-speed");
 let humidity = document.querySelector("#humidity");
 let weatherIcon = document.querySelector("#weather-icon");
+let secondSection = document.querySelector("#main-display");
 
 function showDescription(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -42,7 +43,6 @@ function showDescription(response) {
   let weatherIconCode = response.data.weather[0].icon;
   let weatherIconLink = `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
   weatherIcon.setAttribute("src", weatherIconLink);
-  console.log(weatherIconCode);
 }
 
 function showTemp(response) {
@@ -57,6 +57,7 @@ function displayCity(event) {
     cityName.innerHTML = searchEngine.value;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchEngine.value}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemp);
+    secondSection.style.display = "inline-block";
   }
 }
 
