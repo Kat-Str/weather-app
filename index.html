@@ -21,27 +21,23 @@
   <body>
     <div class="container content">
       <div class="container">
-        <div class="row">
-          <div class="search-form">
-            <form id="form-city">
-              <!-- <input
+        <div class="search-form">
+          <form id="form-city">
+            <!-- <input
                 type="submit"
                 value="Current location"
                 id="current-location-button"
               /> -->
-              <input type="submit" id="search-button" value="search" />
-              <input
-                type="text"
-                id="search-engine"
-                placeholder="Enter the city"
-              />
-            </form>
-          </div>
-          <div class="section-one">
-            <h1 id="displayed-city">Weather</h1>
-            <p id="current-time">Sunday, 17:00</p>
-          </div>
-          <div class="section-two">
+            <input type="submit" id="search-button" value="search" />
+            <input
+              type="text"
+              id="search-engine"
+              placeholder="Enter the city"
+            />
+          </form>
+        </div>
+        <div class="row sections">
+          <div class="col-6 d-flex align-items-center section-two">
             <img
               id="weather-icon"
               src="https://openweathermap.org/img/wn/04d@2x.png"
@@ -58,38 +54,18 @@
                 ></sup
               > -->
             </h2>
+          </div>
+          <div class="col-6 section-one">
+            <h1 id="displayed-city">Weather</h1>
+            <p id="current-time">Sunday, 17:00</p>
             <ul class="weather-list">
               <li id="weather-details"></li>
               <li id="wind-speed"></li>
               <li id="humidity"></li>
             </ul>
           </div>
-          <div class="col next-day">
-            <h5>Monday</h5>
-            <i>emoji</i>
-            <p class="temperature">5°C</p>
-          </div>
-          <div class="col next-day">
-            <h5>Tuesday</h5>
-            <i>emoji</i>
-            <p class="temperature">5°C</p>
-          </div>
-          <div class="col next-day">
-            <h5>Wednesday</h5>
-            <i>emoji</i>
-            <p class="temperature">2°C</p>
-          </div>
-          <div class="col next-day">
-            <h5>Thursday</h5>
-            <i>emoji</i>
-            <p class="temperature">2°C</p>
-          </div>
-          <div class="col next-day">
-            <h5>Friday</h5>
-            <i>emoji</i>
-            <p class="temperature">2°C</p>
-          </div>
         </div>
+        <div id="forecast-row"></div>
       </div>
 
       <small>

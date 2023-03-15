@@ -6,19 +6,21 @@ body {
 body {
   background: linear-gradient(
     0deg,
-    rgba(130, 116, 192, 1) 0%,
+    rgb(229, 216, 182) 0%,
     rgba(59, 103, 198, 1) 40%,
     rgba(6, 15, 94, 1) 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  height: 500px;
 }
 
 small {
   display: block;
   text-align: center;
   margin: 0 auto;
+  margin-top: 40px;
 }
 .github-link {
   text-decoration: none;
@@ -29,13 +31,17 @@ small {
 
 .section-one {
   text-align: right;
-  margin-right: 80px;
 }
 .next-day {
+  width: 90px;
+  height: 90px;
   margin: 10px;
   padding: 5px;
   text-align: center;
   border-radius: 15px;
+}
+.next-day h5 {
+  font-size: 15px;
 }
 .degrees {
   font-size: 20px;
@@ -48,12 +54,14 @@ small {
 
 .content {
   max-width: 1000px;
+  max-height: 700px;
   margin: 60px auto;
   padding: 40px 40px;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 0.7;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 800px;
 }
 
 .section-two i,
@@ -128,4 +136,8 @@ small {
 
 h2 sup {
   vertical-align: super;
+}
+
+.min-day-temp {
+  opacity: 0.5;
 }
