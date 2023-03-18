@@ -42,6 +42,7 @@
               id="weather-icon"
               src="https://openweathermap.org/img/wn/04d@2x.png"
               alt="Weather icon"
+              class="hidden"
             />
             <h2 id="main-display">
               <span id="tepm-display"></span><sup>°C</sup>
@@ -57,15 +58,15 @@
           </div>
           <div class="col-6 section-one">
             <h1 id="displayed-city">Weather</h1>
-            <p id="current-time">Sunday, 17:00</p>
+            <p id="current-time" class="hidden">Sunday, 17:00</p>
             <ul class="weather-list">
-              <li id="weather-details"></li>
-              <li id="wind-speed"></li>
-              <li id="humidity"></li>
+              <li id="weather-details" class="hidden"></li>
+              <li id="wind-speed" class="hidden"></li>
+              <li id="humidity" class="hidden"></li>
             </ul>
           </div>
         </div>
-        <div id="forecast-row"></div>
+        <div id="forecast-row" class="hidden"></div>
       </div>
 
       <small>

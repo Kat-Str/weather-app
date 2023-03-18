@@ -34,6 +34,8 @@ let windSpeed = document.querySelector("#wind-speed");
 let humidity = document.querySelector("#humidity");
 let weatherIcon = document.querySelector("#weather-icon");
 let secondSection = document.querySelector("#main-display");
+let weatherList = document.querySelectorAll("#weather-list");
+let hiddenElements = document.querySelectorAll(".hidden");
 
 function formatData(time) {
   let date = new Date(time * 1000);
@@ -93,6 +95,11 @@ function showTemp(response) {
   showDescription(response);
   //get coords
   getForecast(response.data.coord);
+  // show hidden elements
+  hiddenElements.forEach((element) => {
+    element.style.display = "block";
+  });
+  secondSection.style.display = "inline-block";
 }
 
 function displayCity(event) {
@@ -100,7 +107,16 @@ function displayCity(event) {
   if (searchEngine.value !== "") {
     cityName.innerHTML = searchEngine.value;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchEngine.value}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(showTemp);
+    axios
+      .get(apiUrl)
+      .then(showTemp)
+      .catch(() => {
+        cityName.innerHTML = "City not found";
+        hiddenElements.forEach((element) => {
+          element.style.display = "none";
+        });
+        secondSection.style.display = "none";
+      });
     secondSection.style.display = "inline-block";
   }
 }

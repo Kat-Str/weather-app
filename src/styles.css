@@ -85,7 +85,8 @@ small {
   border-style: none;
 }
 #displayed-city {
-  font-size: 60px;
+  font-size: 45px;
+  text-transform: capitalize;
 }
 #current-time {
   font-size: 25px;
