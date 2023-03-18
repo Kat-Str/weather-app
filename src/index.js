@@ -121,6 +121,14 @@ function displayCity(event) {
   }
 }
 
+function showDefaultCity(city = "Lublin") {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  cityName.innerHTML = city;
+  axios.get(url).then(showTemp);
+}
+
+showDefaultCity();
+
 formCity.addEventListener("submit", displayCity);
 
 //add the button searching for the current location:
